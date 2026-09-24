@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartQueue — Better Healthcare Experience</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- PAGE 1 — HOME -->
+<div id="page-home" class="page active">
+    <nav class="top-nav">
+        <div class="nav-inner">
+            <div class="brand" onclick="showPage('page-home')" style="cursor:pointer">
+                <div class="brand-dot"></div>SmartQueue
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#" class="nav-link active" onclick="showPage('page-home')">Home</a></li>
+                <li><a href="#" class="nav-link" onclick="showSection('about')">About</a></li>
+                <li><a href="#" class="nav-link" onclick="showSection('services')">Services</a></li>
+                <li><a href="#" class="nav-link" onclick="showSection('contact')">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="btn btn-outline-blue" onclick="showPage('page-login')">Login</button>
+                <button class="btn btn-primary" onclick="showPage('page-register')">Register</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" id="section-home">
+        <div class="hero-content">
+            <h1 class="hero-title">Smart Queue, Better<br><span>Healthcare Experience</span></h1>
+            <p class="hero-desc">SmartQueue helps clinics manage patient flow efficiently and reduce waiting times.</p>
+            <div class="hero-btns">
+                <button class="btn btn-primary btn-lg" onclick="showPage('page-login')">Login</button>
+                <button class="btn btn-outline-blue btn-lg" onclick="showPage('page-register')">Register</button>
+            </div>
+            <a href="#" class="view-queue-link" onclick="showPage('page-queue-display')">View Queue Status</a>
+        </div>
+        <div class="hero-right">
+            <div class="hero-scene">
+                <div class="hero-scene-bg"></div>
+                <div class="hero-desk">
+                    <div class="desk-bar blue"></div>
+                    <div class="desk-bar"></div>
+                    <div class="desk-bar short"></div>
+                    <div class="desk-bar"></div>
+                </div>
+
+                <div class="float-card float-confirmed">
+                    <div class="float-check">&#10003;</div>
+                    <div>
+                        <strong>Appointment Confirmed</strong>
+                        <p>General Consultation · A23</p>
+                    </div>
+                </div>
+
+                <div class="hero-queue-card">
+                    <div class="hqc-top">
+                        <span class="hqc-dashboard-label">QUEUE DASHBOARD</span>
+                        <span class="hqc-live">&#9679; Live</span>
+                    </div>
+                    <div class="hqc-now">
+                        <div class="hqc-label">NOW SERVING</div>
+                        <div class="hqc-number">A 23</div>
+                        <div class="hqc-counter">Counter 2</div>
+                    </div>
+                    <div class="hqc-stats">
+                        <div class="hqc-stat">
+                            <div class="hqc-stat-label">Your Position</div>
+                            <div class="hqc-stat-value">3</div>
+                            <div class="hqc-stat-sub">in queue</div>
+                        </div>
+                        <div class="hqc-stat">
+                            <div class="hqc-stat-label">Est. Wait Time</div>
+                            <div class="hqc-stat-value">15 <span>min</span></div>
+                            <div class="hqc-stat-sub">approximate</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="float-card float-appointments">
+                    <div class="float-icon">&#128202;</div>
+                    <div>
+                        <strong>342 Appointments</strong>
+                        <p>Today · All Departments</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="features" id="section-features">
+        <div class="feature-card">
+            <div class="feat-icon blue">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            </div>
+            <h3>Book Appointments</h3>
+            <p>Schedule your visit online anytime from anywhere</p>
+        </div>
+        <div class="feature-card">
+            <div class="feat-icon green">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+            <h3>Track Queue Status</h3>
+            <p>See your real-time position in the queue</p>
+        </div>
+        <div class="feature-card">
+            <div class="feat-icon orange">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+            </div>
+            <h3>Get Notifications</h3>
+            <p>Receive SMS alerts when your turn is near</p>
+        </div>
+        <div class="feature-card">
+            <div class="feat-icon purple">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            </div>
+            <h3>Appointment History</h3>
+            <p>Access your full visit and appointment records</p>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="home-section" id="section-about" style="display:none">
+        <div class="section-inner">
+            <div class="section-badge">About Us</div>
+            <h2 class="section-title">Transforming Healthcare Queue Management</h2>
+            <p class="section-desc">SmartQueue was built to solve the frustration of long clinic waiting times. We provide clinics and hospitals with a modern digital queue management system that gives patients visibility, reduces stress, and helps staff work more efficiently.</p>
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="about-num blue">10+</div>
+                    <p>Clinics using SmartQueue</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-num green">50K+</div>
+                    <p>Patients served monthly</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-num orange">40%</div>
+                    <p>Reduction in wait times</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-num purple">99.9%</div>
+                    <p>System uptime</p>
+                </div>
+            </div>
+            <div class="about-story">
+                <div class="about-story-text">
+                    <h3>Our Mission</h3>
+                    <p>Our mission is to make healthcare more accessible and less stressful by giving patients the information they need and giving clinics the tools to serve better. We believe no patient should have to stand in a long queue not knowing when they will be seen.</p>
+                    <h3 style="margin-top:20px">Our Vision</h3>
+                    <p>A South African healthcare system where every clinic runs efficiently, every patient is respected, and digital tools bridge the gap between patients and providers.</p>
+                </div>
+                <div class="about-story-card">
+                    <div class="story-stat">
+                        <div class="stat-big blue">2021</div>
+                        <p>Year founded</p>
+                    </div>
+                    <div class="story-stat">
+                        <div class="stat-big green">SA</div>
+                        <p>South Africa based</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section class="home-section" id="section-services" style="display:none">
+        <div class="section-inner">
+            <div class="section-badge">Our Services</div>
+            <h2 class="section-title">Everything Your Clinic Needs</h2>
+            <p class="section-desc">SmartQueue provides a complete suite of tools for clinics of all sizes — from a single GP practice to a large hospital with multiple departments.</p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon blue">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                    </div>
+                    <h3>Online Appointment Booking</h3>
+                    <p>Patients can book appointments 24/7 from any device. Select department, date, time and receive instant confirmation with a queue number.</p>
+                    <ul class="service-list">
+                        <li>Real-time slot availability</li>
+                        <li>SMS confirmation</li>
+                        <li>Easy cancellation</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon green">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                    </div>
+                    <h3>Live Queue Management</h3>
+                    <p>Staff can call patients, update queue status, and manage walk-ins all from a single dashboard. Patients see live updates on their phones.</p>
+                    <ul class="service-list">
+                        <li>Priority queue support</li>
+                        <li>Walk-in registration</li>
+                        <li>Public display screen</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon orange">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    </div>
+                    <h3>Patient Management</h3>
+                    <p>Maintain complete digital patient profiles including visit history, appointment records, and contact details — all POPIA compliant.</p>
+                    <ul class="service-list">
+                        <li>Digital patient profiles</li>
+                        <li>Visit history tracking</li>
+                        <li>POPIA compliant storage</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon purple">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+                    </div>
+                    <h3>Reports and Analytics</h3>
+                    <p>Admin dashboards with real-time insights into patient volume, wait times, department performance and daily appointment summaries.</p>
+                    <ul class="service-list">
+                        <li>Daily and weekly reports</li>
+                        <li>Department analytics</li>
+                        <li>Exportable data</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon teal">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1.21h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.73a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16z"/></svg>
+                    </div>
+                    <h3>SMS Notifications</h3>
+                    <p>Automated SMS alerts keep patients informed at every step — booking confirmation, queue reminders and when their turn is approaching.</p>
+                    <ul class="service-list">
+                        <li>Booking confirmation SMS</li>
+                        <li>Queue position alerts</li>
+                        <li>Appointment reminders</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon red">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                    <h3>Offline Support</h3>
+                    <p>SmartQueue works even without internet. Data is cached locally and automatically synced to the server when the connection is restored.</p>
+                    <ul class="service-list">
+                        <li>Local data caching</li>
+                        <li>Auto-sync on reconnect</li>
+                        <li>No data loss</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="home-section" id="section-contact" style="display:none">
+        <div class="section-inner">
+            <div class="section-badge">Contact Us</div>
+            <h2 class="section-title">Get in Touch</h2>
+            <p class="section-desc">Have questions about SmartQueue? We are here to help. Fill in the form           and we will get back to you within 24 hours.</p>
+            <div class="contact-layout">
+                <div class="contact-form-wrap">
+                    <div class="form-card" style="box-shadow:none;border:1px solid #e2e8f0;padding:32px">
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input type="text" id="contact-name" placeholder="Enter your full name">
+                        </div>
+                        <div class="form-group">
+                            <label>Email Address</label>
+                            <input type="email" id="contact-email" placeholder="Enter your email">
+                        </div>
+                        <div class="form-group">
+                            <label>Phone Number</label>
+                            <input type="text" id="contact-phone" placeholder="Enter your phone number">
+                        </div>
+                        <div class="form-group">
+                            <label>Subject</label>
+                            <select id="contact-subject">
+                                <option>General Enquiry</option>
+                                <option>Technical Support</option>
+                                <option>Clinic Partnership</option>
+                                <option>Billing</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Message</label>
+                            <textarea id="contact-message" placeholder="Write your message here..." rows="4" style="width:100%;padding:10px 14px;border:1.5px solid #e2e8f0;border-radius:7px;font-size:14px;outline:none;resize:vertical;font-family:inherit"></textarea>
+                        </div>
+                        <div id="contact-msg" class="msg hidden"></div>
+                        <button class="btn btn-primary full-width" onclick="sendContact()">Send Message</button>
+                    </div>
+                </div>
+                <div class="contact-info">
+                    <div class="contact-info-card">
+                        <h3>Contact Information</h3>
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon blue">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1.21h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.73a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16z"/></svg>
+                            </div>
+                            <div>
+                                <strong>Phone</strong>
+                                <p>+27 67 206 5859</p>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon green">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            </div>
+                            <div>
+                                <strong>Email</strong>
+                                <p>tshepomogakane@smartqueue.co.za</p>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon orange">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            </div>
+                            <div>
+                                <strong>Address</strong>
+                                <p>Sol Plaatje University, 24-26 Scanlan St, New Park,<br>Kimberley,  8301, Northern Cape, <br>South Africa</p>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon purple">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                            </div>
+                            <div>
+                                <strong>Business Hours</strong>
+                                <p>Monday – Friday: 08:00 – 17:00<br>Saturday: 09:00 – 13:00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-cta-card">
+                        <h3>Ready to get started?</h3>
+                        <p>Register today and experience smarter healthcare queue management.</p>
+                        <button class="btn btn-primary full-width" style="margin-top:16px" onclick="showPage('page-register')">Create Free Account</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <div class="brand" style="color:#fff;cursor:pointer" onclick="showPage('page-home')">
+                    <div class="brand-dot" style="background:#60a5fa"></div>SmartQueue
+                </div>
+                <p>Smarter healthcare queue management for South African clinics.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <a href="#" onclick="showPage('page-home')">Home</a>
+                <a href="#" onclick="showSection('about')">About</a>
+                <a href="#" onclick="showSection('services')">Services</a>
+                <a href="#" onclick="showSection('contact')">Contact</a>
+            </div>
+            <div class="footer-links">
+                <h4>Account</h4>
+                <a href="#" onclick="showPage('page-login')">Login</a>
+                <a href="#" onclick="showPage('page-register')">Register</a>
+                <a href="#" onclick="showPage('page-queue-display')">Queue Display</a>
+            </div>
+            <div class="footer-links">
+                <h4>Legal</h4>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">POPIA Compliance</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 SmartQueue. All rights reserved. Built for Sol Plaatje University.</p>
+        </div>
+    </footer>
+</div>
+
+<!-- PAGE 2 — REGISTER -->
+<div id="page-register" class="page">
+    <nav class="top-nav">
+        <div class="nav-inner">
+            <div class="brand" onclick="showPage('page-home')" style="cursor:pointer">
+                <div class="brand-dot"></div>SmartQueue
+            </div>
+            <div class="nav-right-link">Already have an account? <a href="#" onclick="showPage('page-login')">Login</a></div>
+        </div>
+    </nav>
+    <div class="split-layout">
+        <div class="split-form">
+            <div class="form-card">
+                <h2>Create an Account</h2>
+                <p class="form-subtitle">Fill in your details to get started</p>
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" id="reg-name" placeholder="Enter your full name">
+                </div>
+                <div class="form-group">
+                    <label>ID / Patient Number</label>
+                    <input type="text" id="reg-id" placeholder="Enter your ID number">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Phone Number</label>
+                        <input type="text" id="reg-contact" placeholder="Enter your phone number">
+                    </div>
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" id="reg-email" placeholder="Enter your email">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" id="reg-password" placeholder="Create a password">
+                    </div>
+                    <div class="form-group">
+                        <label>Confirm Password</label>
+                        <input type="password" id="reg-confirm" placeholder="Confirm your password">
+                    </div>
+                </div>
+                <label class="checkbox-label">
+                    <input type="checkbox" id="reg-terms">
+                    I agree to the <a href="#">Terms and Conditions</a>
+                </label>
+                <div id="reg-msg" class="msg hidden"></div>
+                <button class="btn btn-primary full-width" onclick="register()">Register</button>
+            </div>
+        </div>
+        <div class="split-side blue-side">
+            <h2>Why Register?</h2>
+            <p>Join thousands of patients who manage their healthcare smarter.</p>
+            <ul class="why-list">
+                <li>Book appointments online</li>
+                <li>View your queue status</li>
+                <li>Receive real-time updates</li>
+                <li>Access your appointment history</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- PAGE 3 — LOGIN -->
+<div id="page-login" class="page">
+    <nav class="top-nav">
+        <div class="nav-inner">
+            <div class="brand" onclick="showPage('page-home')" style="cursor:pointer">
+                <div class="brand-dot"></div>SmartQueue
+            </div>
+            <div class="nav-right-link">Don't have an account? <a href="#" onclick="showPage('page-register')">Register</a></div>
+        </div>
+    </nav>
+    <div class="split-layout">
+        <div class="split-form">
+            <div class="form-card">
+                <h2>Welcome Back!</h2>
+                <p class="form-subtitle">Login to your account</p>
+                <div class="form-group">
+                    <label>Username / Email</label>
+                    <input type="email" id="login-email" placeholder="Enter your username or email">
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <div style="position:relative">
+                        <input type="password" id="login-password" placeholder="Enter your password" style="padding-right:130px">
+                        <a href="#" class="forgot-link">Forgot password?</a>
+                    </div>
+                </div>
+
+                <div id="login-error" class="msg hidden"></div>
+                <button class="btn btn-primary full-width" onclick="login()">Login</button>
+            </div>
+        </div>
+        <div class="split-side blue-side">
+            <h2>Login as</h2>
+            <p>Select your role to access the right features.</p>
+            <div class="role-cards">
+                <div class="role-card active-role">
+                    <div class="role-icon-box">P</div>
+                    <div>
+                        <strong>Patient</strong>
+                        <p>Book appointments and check queue status</p>
+                    </div>
+                </div>
+                <div class="role-card">
+                    <div class="role-icon-box">S</div>
+                    <div>
+                        <strong>Staff</strong>
+                        <p>Manage appointments and call patients</p>
+                    </div>
+                </div>
+                <div class="role-card">
+                    <div class="role-icon-box">A</div>
+                    <div>
+                        <strong>Admin</strong>
+                        <p>Manage users and system settings</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- PAGE 4 — PATIENT DASHBOARD -->
+<div id="page-patient" class="page">
+    <div class="app-layout">
+        <aside class="sidebar">
+            <div class="sidebar-brand" onclick="showPage('page-home')" style="cursor:pointer">
+                <div class="brand-dot white-dot"></div>SmartQueue
+            </div>
+            <div class="sidebar-user">
+                <div class="user-avatar" id="patient-avatar">JD</div>
+                <div>
+                    <div class="user-label">Welcome,</div>
+                    <div class="user-name" id="sidebar-name">John Doe</div>
+                </div>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#" class="side-link active" onclick="showPatientTab('tab-dashboard',this)">Dashboard</a>
+                <a href="#" class="side-link" onclick="showPatientTab('tab-book',this)">Book Appointment</a>
+                <a href="#" class="side-link" onclick="showPatientTab('tab-queue-status',this)">Queue Status</a>
+                <a href="#" class="side-link" onclick="showPatientTab('tab-history',this)">Appointment History</a>
+                <a href="#" class="side-link" onclick="showPatientTab('tab-notifications',this)">Notifications</a>
+                <a href="#" class="side-link" onclick="showPatientTab('tab-profile',this)">Profile</a>
+                <a href="#" class="side-link logout-link" onclick="logout()">Logout</a>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <div id="tab-dashboard" class="ptab active">
+                <div class="page-header">
+                    <div>
+                        <h1 id="dash-greeting">Hello, John!</h1>
+                        <p class="page-subtitle">How can we help you today?</p>
+                    </div>
+                    <div class="page-date" id="dash-date"></div>
+                </div>
+                <div class="dash-cards">
+                    <div class="dash-card blue-card" onclick="showPatientTab('tab-book')">
+                        <div class="dc-title">Book Appointment</div>
+                        <div class="dc-desc">Schedule a new appointment</div>
+                    </div>
+                    <div class="dash-card green-card" onclick="showPatientTab('tab-queue-status')">
+                        <div class="dc-title">Queue Status</div>
+                        <div class="dc-desc">Check your current queue status</div>
+                    </div>
+                    <div class="dash-card orange-card" onclick="showPatientTab('tab-history')">
+                        <div class="dc-title">Appointment History</div>
+                        <div class="dc-desc">View your past appointments</div>
+                    </div>
+                    <div class="dash-card purple-card" onclick="showPatientTab('tab-notifications')">
+                        <div class="dc-title">Notifications</div>
+                        <div class="dc-desc">View your latest updates</div>
+                    </div>
+                </div>
+                <div class="dash-bottom">
+                    <div class="dash-section">
+                        <h3>Upcoming Appointment</h3>
+                        <div class="upcoming-card">
+                            <div class="uc-dot"></div>
+                            <div class="uc-left">
+                                <strong>General Consultation</strong>
+                                <p id="upcoming-date">Loading...</p>
+                                <p>Dr. Smith</p>
+                            </div>
+                            <button class="btn btn-sm btn-primary" onclick="showPatientTab('tab-history')">View Details</button>
+                        </div>
+                    </div>
+                    <div class="dash-section">
+                        <h3>Latest Notification</h3>
+                        <div class="notif-item">
+                            <div class="notif-dot"></div>
+                            <div>
+                                <strong>Appointment Confirmed</strong>
+                                <p>Your appointment has been confirmed. Your queue number will be sent on the appointment date.</p>
+                                <small>10 minutes ago</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="tab-book" class="ptab">
+                <div class="page-header">
+                    <h1>Book Appointment</h1>
+                    <div class="page-date" id="book-date-display"></div>
+                </div>
+                <div class="content-card">
+                    <h2>Book Appointment</h2>
+                    <p class="form-subtitle">Fill in the details below to book your appointment</p>
+                    <div class="book-layout">
+                        <div class="book-form">
+                            <div class="form-group">
+                                <label>Select Department / Service</label>
+                                <select id="book-dept" onchange="updateSummary()"></select>
+                            </div>
+                            <div class="form-group">
+                                <label>Select Doctor (Optional)</label>
+                                <select><option>Any Available Doctor</option><option>Dr. Smith</option><option>Dr. Johnson</option></select>
+                            </div>
+                            <div class="form-group">
+                                <label>Select Date</label>
+                                <input type="date" id="book-date" onchange="updateSummary()">
+                            </div>
+                            <div class="form-group">
+                                <label>Select Time</label>
+                                <input type="time" id="book-time" min="07:00" max="17:00" onchange="updateSummary()">
+                            </div>
+                            <div id="book-msg" class="msg hidden"></div>
+                            <button class="btn btn-primary full-width" onclick="bookAppointment()">Confirm Booking</button>
+                        </div>
+                        <div class="book-summary">
+                            <h3>Appointment Summary</h3>
+                            <div class="summary-row"><span>Department</span><span id="sum-dept">—</span></div>
+                            <div class="summary-row"><span>Doctor</span><span>Any Available Doctor</span></div>
+                            <div class="summary-row"><span>Date</span><span id="sum-date">—</span></div>
+                            <div class="summary-row"><span>Time</span><span id="sum-time">—</span></div>
+                            <p class="summary-note">Note: Please arrive 15 minutes before your scheduled appointment.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="tab-queue-status" class="ptab">
+                <div class="page-header">
+                    <h1>Queue Status</h1>
+                    <button class="btn btn-sm btn-outline-blue" onclick="loadMyQueueStatus()">Refresh Status</button>
+                </div>
+                <p class="page-subtitle">Live updates from your selected department</p>
+                <div style="padding:0 28px 16px;max-width:320px">
+                    <div class="form-group">
+                        <label>Select Department</label>
+                        <select id="qs-dept" onchange="loadMyQueueStatus()"></select>
+                    </div>
+                </div>
+                <div class="queue-status-layout">
+                    <div class="qs-card">
+                        <p class="qs-label">Now Serving</p>
+                        <div class="qs-serving-num" id="qs-now-serving">—</div>
+                        <p class="qs-counter-label" id="qs-counter">Counter 2</p>
+                    </div>
+                    <div class="qs-card qs-main-card">
+                        <p class="qs-label">Your Queue Number</p>
+                        <div class="qs-my-num" id="qs-my-number">—</div>
+                        <p class="qs-position">Your Position: <strong id="qs-position">—</strong></p>
+                        <p class="qs-wait-label">Estimated Waiting Time</p>
+                        <div class="qs-wait-time" id="qs-wait">— mins</div>
+                        <p class="qs-thankyou">Please wait for your number to be called. Thank you!</p>
+                        <button class="btn btn-sm btn-outline-blue" onclick="loadMyQueueStatus()">Refresh Status</button>
+                    </div>
+                    <div class="qs-card">
+                        <p class="qs-label">Next in Line</p>
+                        <div id="qs-next-list"><div class="empty-state" style="padding:20px">Loading...</div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="tab-history" class="ptab">
+                <div class="page-header">
+                    <h1>Appointment History</h1>
+                    <button class="btn btn-sm btn-outline-blue" onclick="loadAppointments()">Refresh</button>
+                </div>
+                <div class="content-card">
+                    <div id="appointments-list"><div class="empty-state">Loading appointments...</div></div>
+                </div>
+            </div>
+
+            <div id="tab-notifications" class="ptab">
+                <div class="page-header"><h1>Notifications</h1></div>
+                <div class="content-card">
+                    <div class="notif-item">
+                        <div class="notif-dot"></div>
+                        <div><strong>Appointment Confirmed</strong><p>Your appointment has been confirmed successfully.</p><small>Just now</small></div>
+                    </div>
+                    <div class="notif-item">
+                        <div class="notif-dot green"></div>
+                        <div><strong>Queue Update</strong><p>Your queue number is ready. Please proceed to the counter.</p><small>10 minutes ago</small></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="tab-profile" class="ptab">
+                <div class="page-header"><h1>My Profile</h1></div>
+                <div class="content-card">
+                    <div class="profile-header">
+                        <div class="profile-avatar" id="profile-avatar">JD</div>
+                        <div>
+                            <h2 id="profile-name">John Doe</h2>
+                            <p style="color:#64748b;font-size:13px" id="profile-email">john@example.com</p>
+                            <span class="badge badge-confirmed" style="margin-top:6px">Active Patient</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-card">
+                    <h2>Edit Profile</h2>
+                    <p class="form-subtitle">Update your personal details below</p>
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" id="profile-edit-name" placeholder="Enter your full name">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Phone Number</label>
+                            <input type="text" id="profile-edit-contact" placeholder="Enter your phone number">
+                        </div>
+                        <div class="form-group">
+                            <label>Email Address</label>
+                            <input type="email" id="profile-edit-email" placeholder="Enter your email">
+                        </div>
+                    </div>
+                    <div id="profile-edit-msg" class="msg hidden"></div>
+                    <button class="btn btn-primary" onclick="updateProfile()">Save Changes</button>
+                </div>
+                <div class="content-card">
+                    <h2>Change Password</h2>
+                    <p class="form-subtitle">Update your account password</p>
+                    <div class="form-group">
+                        <label>Current Password</label>
+                        <input type="password" id="profile-current-password" placeholder="Enter your current password">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>New Password</label>
+                            <input type="password" id="profile-new-password" placeholder="Enter a new password">
+                        </div>
+                        <div class="form-group">
+                            <label>Confirm New Password</label>
+                            <input type="password" id="profile-confirm-password" placeholder="Confirm your new password">
+                        </div>
+                    </div>
+                    <div id="profile-password-msg" class="msg hidden"></div>
+                    <button class="btn btn-primary" onclick="changePassword()">Update Password</button>
+                </div>
+            </div>
+
+
+
+
+        </main>
+    </div>
+</div>
+
+<!-- PAGE 5 — QUEUE CONFIRMATION -->
+<div id="page-confirmation" class="page">
+    <nav class="top-nav">
+        <div class="nav-inner">
+            <div class="brand" onclick="showPage('page-home')" style="cursor:pointer"><div class="brand-dot"></div>SmartQueue</div>
+        </div>
+    </nav>
+    <div class="confirm-wrap">
+        <div class="confirm-card">
+            <div class="confirm-check">&#10003;</div>
+            <h2>Appointment Booked Successfully!</h2>
+            <p style="color:#64748b;margin-bottom:4px">Your Queue Number</p>
+            <div class="confirm-number" id="confirm-number">A23</div>
+            <div class="confirm-details" id="confirm-details"></div>
+            <p class="confirm-note">Please save your queue number and arrive on time.</p>
+            <button class="btn btn-primary" style="width:100%" onclick="showPatientTab('tab-queue-status');showPage('page-patient')">View Queue Status</button>
+            <a class="confirm-back" href="#" onclick="showPatientTab('tab-dashboard');showPage('page-patient')">Go to Dashboard</a>
+        </div>
+    </div>
+</div>
+
+<!-- PAGE 6 — PUBLIC QUEUE DISPLAY -->
+<div id="page-queue-display" class="page">
+    <nav class="top-nav dark-nav">
+        <div class="nav-inner">
+            <div class="brand" style="color:#fff;cursor:pointer" onclick="showPage('page-home')">
+                <div class="brand-dot" style="background:#60a5fa"></div>SmartQueue
+            </div>
+            <span id="display-datetime" class="display-time"></span>
+            <div style="display:flex;gap:8px;margin-left:auto">
+                <button class="btn btn-sm btn-outline-white" onclick="loadQueueDisplay()">Refresh</button>
+                <button class="btn btn-sm btn-outline-white" onclick="showPage('page-home')">Back</button>
+            </div>
+        </div>
+    </nav>
+    <div class="display-layout">
+        <div class="display-now">
+            <p class="display-label">NOW SERVING</p>
+            <div class="display-big" id="display-now">A20</div>
+            <p class="display-counter-text" id="display-counter">Counter 2</p>
+        </div>
+        <div class="display-next-wrap">
+            <p class="display-label white">NEXT IN LINE</p>
+            <div id="display-next-list">
+                <div class="display-next-item">
+                    <span class="next-num-big">A21</span>
+                    <span class="next-counter-text">Counter 1</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="display-footer">Thank you for your patience. Your health is our priority.</div>
+</div>
+
+<!-- PAGE 7 — STAFF DASHBOARD -->
+<div id="page-staff" class="page">
+    <div id="staff-login-screen">
+        <nav class="top-nav">
+            <div class="nav-inner">
+                <div class="brand" onclick="showPage('page-home')" style="cursor:pointer"><div class="brand-dot"></div>SmartQueue</div>
+            </div>
+        </nav>
+        <div class="center-wrap">
+            <div class="form-card" style="max-width:420px">
+                <h2>Staff Login</h2>
+                <p class="form-subtitle">Enter your credentials to continue</p>
+                <div class="form-group"><label>Username</label><input type="text" id="staff-user" placeholder="Enter username"></div>
+                <div class="form-group"><label>Password</label><input type="password" id="staff-pass" placeholder="Enter password"></div>
+                <div id="staff-login-msg" class="msg hidden"></div>
+                <button class="btn btn-primary full-width" onclick="staffLogin()">Login</button>
+                <div style="margin-top:12px"><button class="btn btn-outline-blue full-width" onclick="showPage('page-home')">Back to Home</button></div>
+            </div>
+        </div>
+    </div>
+    <div id="staff-app" class="hidden">
+        <div class="app-layout">
+            <aside class="sidebar">
+                <div class="sidebar-brand" onclick="showPage('page-home')" style="cursor:pointer">
+                    <div class="brand-dot white-dot"></div>SmartQueue
+                </div>
+                <div class="sidebar-user">
+                    <div class="user-avatar green-av">ES</div>
+                    <div>
+                        <div class="user-label">Welcome,</div>
+                        <div class="user-name">Tshepo Mogakane</div>
+                        <div class="user-role">Staff</div>
+                    </div>
+                </div>
+                <nav class="sidebar-nav">
+                    <a href="#" class="side-link" onclick="showStaffTab('stab-dashboard',this)">Dashboard</a>
+                    <a href="#" class="side-link active" onclick="showStaffTab('stab-queue',this)">Queue Management</a>
+                    <a href="#" class="side-link" onclick="showStaffTab('stab-appointments',this)">Appointments</a>
+                    <a href="#" class="side-link" onclick="showStaffTab('stab-patients',this)">Patients</a>
+                    <a href="#" class="side-link" onclick="showStaffTab('stab-reports',this)">Reports</a>
+                    <a href="#" class="side-link logout-link" onclick="staffLogout()">Logout</a>
+                </nav>
+            </aside>
+            <main class="main-content">
+                <div id="stab-dashboard" class="stab hidden">
+                    <div class="page-header"><h1>Staff Dashboard</h1><div class="page-date" id="staff-date"></div></div>
+                    <div class="dash-cards" style="grid-template-columns:repeat(3,1fr)">
+                        <div class="dash-card blue-card"><div class="dc-num" id="staff-total-patients">—</div><div class="dc-title">Patients Today</div></div>
+                        <div class="dash-card green-card"><div class="dc-num" id="staff-waiting">—</div><div class="dc-title">Waiting</div></div>
+                        <div class="dash-card orange-card"><div class="dc-num" id="staff-served">—</div><div class="dc-title">Served Today</div></div>
+                    </div>
+                </div>
+                <div id="stab-queue" class="stab">
+                    <div class="page-header"><h1>Queue Management</h1><div class="page-date" id="staff-queue-date"></div></div>
+                    <div class="content-card">
+                        <div class="queue-controls">
+                            <select id="staff-dept" class="form-select" style="max-width:260px"></select>
+                            <button class="btn btn-outline-blue" onclick="loadStaffQueue()">Load Queue</button>
+                            <button class="btn btn-primary" onclick="callNext()">Call Next Patient</button>
+                        </div>
+                        <div id="staff-msg" class="msg hidden" style="margin:12px 0"></div>
+                        <div id="staff-queue-list"><div class="empty-state">Select a department and click Load Queue.</div></div>
+                    </div>
+                </div>
+                <div id="stab-appointments" class="stab hidden">
+                    <div class="page-header">
+                        <h1>Appointments</h1>
+                        <button class="btn btn-sm btn-outline-blue" onclick="loadStaffAppointments()">Refresh</button>
+                    </div>
+                    <div class="content-card">
+                        <div class="queue-controls">
+                            <select id="staff-appt-scope" class="form-select" style="max-width:200px" onchange="loadStaffAppointments()">
+                                <option value="today">Today's Appointments</option>
+                                <option value="all">All Appointments</option>
+                            </select>
+                        </div>
+                        <div id="staff-appt-msg" class="msg hidden" style="margin:12px 0"></div>
+                        <div id="staff-appointments-list"><div class="empty-state">Loading...</div></div>
+                    </div>
+                </div>
+                <div id="stab-patients" class="stab hidden">
+                    <div class="page-header">
+                        <h1>Patients</h1>
+                        <button class="btn btn-sm btn-outline-blue" onclick="loadStaffPatients()">Refresh</button>
+                    </div>
+                    <div class="content-card">
+                        <div id="staff-patients-list"><div class="empty-state">Loading...</div></div>
+                    </div>
+                </div>
+                <div id="stab-reports" class="stab hidden">
+                    <div class="page-header">
+                        <h1>Reports</h1>
+                        <button class="btn btn-sm btn-outline-blue" onclick="loadStaffReports()">Refresh</button>
+                    </div>
+                    <div class="content-card">
+                        <h3 style="font-size:15px;font-weight:700;margin-bottom:16px">Appointment Totals</h3>
+                        <div class="report-stats">
+                            <div class="rstat"><p>Total Appointments</p><strong id="rep-total">—</strong></div>
+                            <div class="rstat"><p>Completed</p><strong class="big-green" id="rep-completed">—</strong></div>
+                            <div class="rstat"><p>Cancelled</p><strong id="rep-cancelled">—</strong></div>
+                            <div class="rstat"><p>No Show</p><strong class="big-red" id="rep-noshow">—</strong></div>
+                        </div>
+                    </div>
+                    <div class="content-card">
+                        <h3 style="font-size:15px;font-weight:700;margin-bottom:16px">Today's Queue Performance by Department</h3>
+                        <div id="staff-dept-performance"><div class="empty-state">Loading...</div></div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</div>
+<!-- PAGE 8 — ADMIN DASHBOARD -->
+<div id="page-admin" class="page">
+    <div id="admin-login-screen">
+        <nav class="top-nav">
+            <div class="nav-inner">
+                <div class="brand" onclick="showPage('page-home')" style="cursor:pointer"><div class="brand-dot"></div>SmartQueue</div>
+            </div>
+        </nav>
+        <div class="center-wrap">
+            <div class="form-card" style="max-width:420px">
+                <h2>Admin Login</h2>
+                <p class="form-subtitle">System administration access</p>
+                <div class="form-group"><label>Username</label><input type="text" id="admin-user" placeholder="Enter username"></div>
+                <div class="form-group"><label>Password</label><input type="password" id="admin-pass" placeholder="Enter password"></div>
+                <div id="admin-login-msg" class="msg hidden"></div>
+                <button class="btn btn-primary full-width" onclick="adminLogin()">Login</button>
+                <div style="margin-top:12px"><button class="btn btn-outline-blue full-width" onclick="showPage('page-home')">Back to Home</button></div>
+            </div>
+        </div>
+    </div>
+    <div id="admin-app" class="hidden">
+        <div class="app-layout">
+            <aside class="sidebar dark-sidebar">
+                <div class="sidebar-brand" onclick="showPage('page-home')" style="cursor:pointer">
+                    <div class="brand-dot" style="background:#60a5fa"></div>SmartQueue
+                </div>
+                <div class="sidebar-user">
+                    <div class="user-avatar red-av">AU</div>
+                    <div>
+                        <div class="user-label">Welcome,</div>
+                        <div class="user-name">Admin User</div>
+                        <div class="user-role">Administrator</div>
+                    </div>
+                </div>
+                <nav class="sidebar-nav">
+                    <a href="#" class="side-link" onclick="showAdminTab('atab-dashboard',this)">Dashboard</a>
+                    <a href="#" class="side-link active" onclick="showAdminTab('atab-users',this)">User Management</a>
+                    <a href="#" class="side-link" onclick="showAdminTab('atab-appointments',this)">Appointments</a>
+                    <a href="#" class="side-link" onclick="showAdminTab('atab-reports',this)">Reports</a>
+                    <a href="#" class="side-link" onclick="showAdminTab('atab-settings',this)">System Settings</a>
+                    <a href="#" class="side-link logout-link" onclick="adminLogout()">Logout</a>
+                </nav>
+            </aside>
+            <main class="main-content">
+                <div id="atab-dashboard" class="atab hidden">
+                    <div class="page-header"><h1>Dashboard</h1><div class="page-date" id="admin-date"></div></div>
+                    <div class="stats-row">
+                        <div class="stat-card"><p class="stat-label">Total Patients</p><div class="stat-num blue" id="stat-patients">1,256</div><a href="#" onclick="showAdminTab('atab-users')" class="stat-link">View all</a></div>
+                        <div class="stat-card"><p class="stat-label">Total Appointments</p><div class="stat-num green" id="stat-appointments">342</div><a href="#" onclick="showAdminTab('atab-appointments')" class="stat-link">View all</a></div>
+                        <div class="stat-card"><p class="stat-label">Today's Appointments</p><div class="stat-num orange" id="stat-today">28</div><a href="#" onclick="showAdminTab('atab-appointments')" class="stat-link">View all</a></div>
+                        <div class="stat-card"><p class="stat-label">Average Wait Time</p><div class="stat-num purple" id="stat-wait">18 mins</div><a href="#" onclick="showAdminTab('atab-reports')" class="stat-link">View reports</a></div>
+                    </div>
+                    <div class="dash-bottom">
+                        <div class="dash-section"><h3>Appointments Overview</h3><canvas id="appt-chart" height="160"></canvas></div>
+                        <div class="dash-section"><h3>Department Performance</h3><div id="dept-perf-list"></div></div>
+                    </div>
+                </div>
+                <div id="atab-users" class="atab">
+                    <div class="page-header"><h1>User Management</h1><button class="btn btn-sm btn-outline-blue" onclick="loadPatients()">Refresh</button></div>
+                    <div class="content-card"><div id="patients-list"><div class="empty-state">Loading...</div></div></div>
+                </div>
+                <div id="atab-appointments" class="atab hidden">
+                    <div class="page-header">
+                        <h1>Appointments</h1>
+                        <button class="btn btn-sm btn-outline-blue" onclick="loadAdminAppointments()">Refresh</button>
+                    </div>
+                    <div class="content-card">
+                        <div class="queue-controls">
+                            <select id="admin-appt-scope" class="form-select" style="max-width:200px" onchange="loadAdminAppointments()">
+                                <option value="today">Today's Appointments</option>
+                                <option value="all">All Appointments</option>
+                            </select>
+                        </div>
+                        <div id="admin-appt-msg" class="msg hidden" style="margin:12px 0"></div>
+                        <div id="admin-appointments-list"><div class="empty-state">Loading...</div></div>
+                    </div>
+                </div>
+
+                <div id="atab-reports" class="atab hidden">
+                    <div class="page-header"><h1>Reports</h1></div>
+                    <div class="content-card">
+                        <div class="tabs-bar">
+                            <button class="tab-btn active" id="rtab-btn-overview" onclick="showReportTab('overview')">Overview</button>
+                            <button class="tab-btn" id="rtab-btn-appointments" onclick="showReportTab('appointments')">Appointments</button>
+                            <button class="tab-btn" id="rtab-btn-queue" onclick="showReportTab('queue')">Queue Performance</button>
+                            <button class="tab-btn" id="rtab-btn-export" onclick="showReportTab('export')">Export</button>
+                        </div>
+
+                        <div class="reports-filters">
+                            <div class="form-group" style="margin:0"><label>Select Date Range</label><input type="date" id="report-from"></div>
+                            <div class="form-group" style="margin:0">
+                                <label>Select Department</label>
+                                <select id="report-dept"><option value="">All Departments</option></select>
+                            </div>
+                            <button class="btn btn-primary" onclick="generateReport()">Generate Report</button>
+                        </div>
+
+                        <div id="report-msg" class="msg hidden"></div>
+
+                        <!-- Overview sub-tab -->
+                        <div id="rtab-overview" class="report-subtab">
+                            <div class="report-stats">
+                                <div class="rstat"><p>Total Appointments</p><strong id="rep total">320</strong></div>
+                                <div class="rstat"><p>Completed</p><strong class="big-green" id="rep completed">220</strong></div>
+                                <div class="rstat"><p>Cancelled</p><strong id="rep cancelled">70</strong></div>
+                                <div class="rstat"><p>No Show</p><strong class="big-red" id="rep noshow">30</strong></div>
+                            </div>
+                        </div>
+
+                        <!-- Appointments sub-tab -->
+                        <div id="rtab-appointments" class="report-subtab hidden">
+                            <div id="report-appointments-list"><div class="empty-state">Click Generate Report to load data.</div></div>
+                        </div>
+
+                        <!-- Queue Performance sub-tab -->
+                        <div id="rtab-queue" class="report-subtab hidden">
+                            <div id="report-queue-list"><div class="empty-state">Click Generate Report to load data.</div></div>
+                        </div>
+
+                        <!-- Export sub-tab -->
+                        <div id="rtab-export" class="report-subtab hidden">
+                            <p class="form-subtitle" style="margin-bottom:16px">Download report data as a CSV file.</p>
+                            <div style="display:flex;gap:12px;flex-wrap:wrap">
+                                <button class="btn btn-outline-blue" onclick="exportReportCsv('appointments')">Export Appointments CSV</button>
+                                <button class="btn btn-outline-blue" onclick="exportReportCsv('queue')">Export Queue Performance CSV</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div id="atab-settings" class="atab hidden">
+                    <div class="page-header"><h1>System Settings</h1></div>
+                    <div class="content-card">
+                        <h3 style="font-size:15px;font-weight:700;margin-bottom:16px">Department Daily Limits</h3>
+                        <div id="admin-depts-list"><div class="empty-state">Loading...</div></div>
+                        <div style="margin-top:24px;padding-top:20px;border-top:1px solid #f1f5f9">
+                            <h3 style="font-size:14px;font-weight:700;margin-bottom:14px">Update Daily Limit</h3>
+                            <div class="form-row" style="align-items:flex-end;max-width:480px">
+                                <div class="form-group" style="margin:0"><label>Department ID</label><input type="number" id="update-dept-id" placeholder="e.g. 1"></div>
+                                <div class="form-group" style="margin:0"><label>New Daily Limit</label><input type="number" id="update-limit" placeholder="e.g. 100"></div>
+                                <button class="btn btn-primary" onclick="updateLimit()">Update</button>
+                            </div>
+                            <div id="admin-dept-msg" class="msg hidden" style="margin-top:12px;max-width:480px"></div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</div>
+
+<!-- PAGE 9 — LOGOUT -->
+<div id="page-logout" class="page">
+    <nav class="top-nav">
+        <div class="nav-inner">
+            <div class="brand" onclick="showPage('page-home')" style="cursor:pointer"><div class="brand-dot"></div>SmartQueue</div>
+        </div>
+    </nav>
+    <div class="confirm-wrap">
+        <div class="confirm-card">
+            <div class="confirm-check">&#10003;</div>
+            <h2>You have been logged out successfully.</h2>
+            <p style="color:#64748b;margin:8px 0 28px">Thank you for using SmartQueue.</p>
+            <button class="btn btn-primary" style="width:100%" onclick="showPage('page-home')">Back to Home Page</button>
+        </div>
+    </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
+<!-- This is just a marker - CSS additions below go into style.css -->
